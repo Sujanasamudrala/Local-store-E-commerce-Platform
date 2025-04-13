@@ -1,1 +1,0 @@
-# Local-store-E-commerce-Platform

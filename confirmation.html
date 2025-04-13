@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="confirmation">
+      <h1>Order placed successfully!</h1>
+      <p>Thank you for shopping with us.</p>
+      <p id="order-total"></p>
+    </div>
+  
+    <script>
+      const total = localStorage.getItem("orderTotal");
+      if (total) {
+        document.getElementById("order-total").innerText = `Total Order Cost: Rs${total}`;
+        localStorage.removeItem("orderTotal"); // Clear after showing
+      }
+    </script>
+  </body>  
+</html>
